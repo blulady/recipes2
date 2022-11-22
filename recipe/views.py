@@ -71,12 +71,14 @@ class DietDetailView(generic.DetailView):
 #                 'new_recipe': new_recipe
 #             }
 #             return render(request, 'recipe/recipe_create_new.html', context)
-#LoginRequiredMixin,
+# LoginRequiredMixin,
 
 class RecipeCreate(LoginRequiredMixin, CreateView):
     model = Recipe
     fields = ['title', 'diet', 'cook_time', 'directions', 'difficulty_level',
               'ingredients', 'associated_recipe', 'origin']
+
+
 # TODO find a way to add a user (chef) to this form without the user filling it in
 
 
@@ -84,6 +86,8 @@ class RecipeUpdateView(LoginRequiredMixin, UpdateView):
     model = Recipe
     fields = ['title', 'diet', 'cook_time', 'directions', 'difficulty_level',
               'ingredients', 'associated_recipe', 'origin']
+
+
 # TODO find a way to add a user (chef) to this form without the user filling it in
 
 
@@ -94,12 +98,14 @@ class RecipeDelete(DeleteView):
 
 class DietCreate(LoginRequiredMixin, CreateView):
     model = Diet
-    fields = ['name']
+    fields = {'name'}
+    labels = {'name': "Diet Type"}
+    help_texts = {'name': "Diet Type"}
 
 
-class DietUpdate(LoginRequiredMixin, CreateView):
+class DietUpdate(LoginRequiredMixin, UpdateView):
     model = Diet
-    fields = ['name']
+    fields = {'name'}
 
 
 def register_page(request):

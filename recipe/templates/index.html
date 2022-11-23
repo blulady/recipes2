@@ -2,12 +2,15 @@
 
 {% block content %}
 {% block title %}<title>Delicious Recipes Home</title>{% endblock %}
-  <h1>Delicious Recipes Home</h1>
+
+  <h1 class="border border-success rounded border-5">Delicious Recipes Home</h1>
   <p>Welcome to Delicious Recipes, a website developed by <em>A Silly Lady</em>!</p>
   <h2>Dynamic content</h2>
   <p>Delicious Recipes Has:</p>
-  <ul>
-    <li><strong>Diet Types:</strong> {{ diet_count }}</li>
-    <li><strong>Recipes:</strong> {{ recipe_count }}</li>
-  </ul>
+    <div class="col-md-8 offset-md-4">
+      <ul >
+        <li><strong>Diet Types:</strong> {{ diet_count }}</li>
+        <li><strong>Recipes:</strong> {{ recipe_count }}</li>
+      </ul>
+    </div>
 {% endblock %}

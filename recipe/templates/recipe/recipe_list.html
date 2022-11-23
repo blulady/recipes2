@@ -1,17 +1,24 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Recipe List</h1>
+  <h1>List of Delightful Recipes</h1>
   {% if recipe_list %}
-  <ul>
-    {% for recipe in recipe_list %}
-      <li>
-       <h3> <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a> </h3> ({{ recipe.difficulty_level }} difficulty level, {{recipe.cook_time }}, {{ recipe.diet.all|join:', ' }}, )
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="col-md-8 offset-md-2">
+    <ul>
+      {% for recipe in recipe_list %}
+        <li>
+         <h3 style="text-align: center;"> <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a> </h3> <p style="color:lightgreen; text-align:center">({{ recipe.difficulty_level }} difficulty level, {{recipe.cook_time }}, {{ recipe.diet.all|join:', ' }}, )</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
   {% else %}
     <p>There are no recipes.</p>
-    <p><a href="{% url 'recipe-create' %}">Add A Recipe</a> </p>
   {% endif %}
+  <br>
+  <br>
+  <hr>
+<p>Want to share your favorite recipe? <a href="{% url 'recipe-create' %}">Add A Recipe</a> </p>
+
+
 {% endblock %}

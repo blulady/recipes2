@@ -1,5 +1,8 @@
 h3 a {
-    color: #C25100;
+    color: green;
+    text-align: center;
+
+
 }
 
 .sidebar-nav {
@@ -10,6 +13,15 @@ h3 a {
 
 h1 {
   font-weight: bold;
+  text-align: center;
+  color: green;
+
+}
+
+h2 {
+    text-align: center;
+    color: lightgreen;
+}
 
 #.bg {
       background-blend-mode: lighten;
@@ -19,3 +31,16 @@ h1 {
 #.con{
       align-content: flext-start;
 }
+
+p {
+    text-align: center;
+    color: lightgreen;
+}
+
+#recipes_pic {
+    background-image: url("/static/img/kettle.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    op
+}
+

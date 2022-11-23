@@ -1,19 +1,24 @@
 {% extends "base_generic.html"%}
 
 {% block content %}
+<div>
   <h1>Recipe by Diet</h1>
   {% if diet_list %}
-  <ul>
-    {% for diet in diet_list %}
-      <li>
-        <h3><a href="{{ diet.get_absolute_url }}">{{ diet.name }}</a></h3>
-      </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-    <p>Must be a mistake, there are no diets here. Enter some.</p>
-  {% endif %}
-  <hr>
+  <div class="col-md-8 offset-md-3">
+    <ul>
+      {% for diet in diet_list %}
+        <li>
+          <h3><a href="{{ diet.get_absolute_url }}">{{ diet.name }}</a></h3>
+        </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>Must be a mistake, there are no diets here. Enter some.</p>
+    {% endif %}
+  </div>
   <br>
+  <br>
+  <hr>
   <p>Don't see your preferred diet? <a href="{%url 'diet-create' %}">Add a Diet </a></p>
+</div>
 {% endblock %}

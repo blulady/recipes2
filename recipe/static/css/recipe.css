@@ -1,26 +1,27 @@
 h3 a {
     color: green;
     text-align: center;
-
-
 }
 
 .sidebar-nav {
     margin-top: 20px;
     padding: 0;
     list-style: none;
+    background-color: black;
 }
 
 h1 {
   font-weight: bold;
   text-align: center;
   color: green;
+  background-color: black;
 
 }
 
 h2 {
     text-align: center;
     color: lightgreen;
+    background-color: black;
 }
 
 #.bg {
@@ -38,7 +39,7 @@ p {
 }
 
 #recipes_pic {
-    background-image: url("/static/img/kettle.jpg");
+    background-image: url("/static/img/spices.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     op

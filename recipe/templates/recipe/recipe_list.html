@@ -7,7 +7,7 @@
     <ul>
       {% for recipe in recipe_list %}
         <li>
-         <h3 style="text-align: center;"> <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a> </h3> <p style="color:lightgreen; text-align:center">({{ recipe.difficulty_level }} difficulty level, {{recipe.cook_time }}, {{ recipe.diet.all|join:', ' }}, )</p>
+         <h3 style="text-align: center; background: black"> <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a> </h3> <p style="color:lightgreen; text-align:center; background-color: black;">({{ recipe.difficulty_level }} difficulty level, {{recipe.cook_time }}, {{ recipe.diet.all|join:', ' }}, )</p>
         </li>
       {% endfor %}
     </ul>

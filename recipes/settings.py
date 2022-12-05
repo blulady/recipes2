@@ -25,6 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -81,9 +82,8 @@ WSGI_APPLICATION = "recipes.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    "default": dj_database_url.config(default='postgres://postgresuser:XhUh1PmLsNc8tr0vPtZuOt9deLzXaXkU@dpg-ce4m92mn6mpj46gpd98g-a/postgresdb_od99')
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

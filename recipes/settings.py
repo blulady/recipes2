@@ -82,7 +82,7 @@ WSGI_APPLICATION = "recipes.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(default='postgres://USER:DATABASE_PASSWORD')
+    "default": dj_database_url.config(default='postgres://postgresuser:XhUh1PmLsNc8tr0vPtZuOt9deLzXaXkU@dpg-ce4m92mn6mpj46gpd98g-a/postgresdb_od99')
 }
 
 # Password validation

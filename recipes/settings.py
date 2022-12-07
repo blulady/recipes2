@@ -92,7 +92,9 @@ DATABASES = {
         "PORT": os.getenv("DB_PORT", 5432),
     }
 }
-DATABASES = {'default': dj_database_url.config(conn_max_age=97)}
+DATABASES = {
+    "default": dj_database_url.config(default='postgres://USER:PASSWORD@HOST:PORT/NAME')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

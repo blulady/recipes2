@@ -16,6 +16,8 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.conf.global_settings import DATABASES
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -80,9 +82,10 @@ WSGI_APPLICATION = "recipes.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    "default": dj_database_url.config(default=os.environ.get('DATABASE_URL', ""))
-}
+DATABASES['default'] = dj_database_url.config()
+# DATABASES = {
+#     "default": dj_database_url.config(default=os.environ.get('DATABASE_URL', ""))
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

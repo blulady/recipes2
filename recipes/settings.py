@@ -93,7 +93,7 @@ DATABASES = {
     }
 }
 DATABASES = {
-    "default": dj_database_url.config(default='postgres://USER:PASSWORD@HOST:PORT/NAME')
+    "default": dj_database_url.config(default='postgres://postgresuser:XhUh1PmLsNc8tr0vPtZuOt9deLzXaXkU@dpg-ce4m92mn6mpj46gpd98g-a/postgresdb_od99')
 }
 
 # Password validation

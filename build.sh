@@ -17,7 +17,7 @@ python manage.py shell <<EOF
 from django.contrib.auth.models import User
 
 User.objects.create_superuser(
-                username = 'sang8',
+                username = 'sang9',
                 email = 'blulady@gmail.com',
                 password = 'funforeveryone2022!!'
 )

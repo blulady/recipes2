@@ -133,7 +133,6 @@ celerybeat.pid
 
 # Environments
 .env
-.env2_remote
 .venv
 env/
 venv/
@@ -141,6 +140,7 @@ rvenv/
 ENV/
 env.bak/
 venv.bak/
+render_env.txt
 
 
 # Spyder project settings

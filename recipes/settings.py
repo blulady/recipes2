@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+from dotenv import load_dotenv
 import dj_database_url
+load_dotenv()
 import whitenoise
 import os
 from pathlib import Path

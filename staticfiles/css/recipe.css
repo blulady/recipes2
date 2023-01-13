@@ -1,0 +1,32 @@
+h3 a {
+    color: green;
+    text-align: center;
+}
+
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    background-color: black;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+#.bg {
+      background-blend-mode: lighten;
+      background-repeat: no-repeat;
+}
+
+#.con{
+      align-content: flext-start;
+}
+
+
+#recipes_pic {
+    background-image: url("/static/img/spices.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
